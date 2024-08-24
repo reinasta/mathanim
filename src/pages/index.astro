@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { animations } from '../animations';
+---
+
+<Layout title="Animation Gallery">
+  <h1>Animation Gallery</h1>
+  <ul>
+    {animations.map(id => (
+      <li><a href={`/animations/${id}`}>{id}</a></li>
+    ))}
+  </ul>
+  <a href="/docs">Documentation</a>
+</Layout>
